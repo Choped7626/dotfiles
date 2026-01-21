@@ -1,0 +1,82 @@
+/* --- CONFIGURACIÓN GENERAL --- */
+* {
+  font-family: "Maple Mono NF", "Maple Mono";
+  border-radius: 8px;
+  font-size: 13px;
+  padding: 0px;
+}
+
+window#waybar {
+  background-color: rgba(20, 18, 22, 0.7);
+  border-radius: 8px;
+  border-style: none;
+}
+
+/* --- ESTILO BASE DE MÓDULOS --- */
+#temperature, #battery, #network, #clock,
+#custom-applauncher, #tray, #workspaces, #pulseaudio {
+  background-color: rgba(20, 18, 22, 0.2);
+  margin: 6px 0px 6px 6px;
+  padding: 2px 8px;
+  border-radius: 8px;
+  color: #d8cab8;
+  border: 1px solid #d8cab8;
+  transition-duration: 120ms;
+}
+
+#tray { color: #99ffdd; border-color: #99ffdd; }
+
+#clock { color: #99ffdd; border-color: #99ffdd; margin-right: 6px; }
+
+/* --- ANIMACIONES --- */
+@keyframes blink {
+  to {
+    background-color: rgba(252, 70, 73, 0.8);
+    color: #141216;
+    border-color: #141216;
+  }
+}
+
+/* --- BATERÍA --- */
+#battery.good, #battery.charging, #battery.full { color: #99ffdd; border-color: #99ffdd; }
+#battery.low:not(.charging) { color: #82aaff; border-color: #82aaff; }
+#battery.warning:not(.charging) { color: #fcb167; border-color: #fcb167; }
+#battery.critical:not(.charging) {
+  color: #fc4649; border-color: #fc4649;
+  animation-name: blink; animation-duration: 0.5s;
+  animation-iteration-count: infinite; animation-direction: alternate;
+}
+
+/* --- TEMPERATURA --- */
+#temperature { color: #99ffdd; border-color: #99ffdd; }
+#temperature.normal { color: #82aaff; border-color: #82aaff; }
+#temperature.warning { color: #fcb167; border-color: #fcb167; }
+#temperature.critical { color: #fc4649; border-color: #fc4649; }
+
+/* --- VOLUMEN --- */
+#pulseaudio.low { color: #fc4649; border-color: #fc4649; }
+#pulseaudio.medium { color: #82aaff; border-color: #82aaff; }
+#pulseaudio.high { color: #99ffdd; border-color: #99ffdd; }
+#pulseaudio.muted { color: #565f89; border-color: #565f89; }
+#pulseaudio { color: #fcb167; border-color: #fcb167; }
+
+/* --- RED (NETWORK) --- */
+#network { color: #ac82e9; border-color: #ac82e9; } /* Lila por defecto */
+#network.wifi, #network.ethernet { color: #99ffdd; border-color: #99ffdd; } /* Verde con tráfico */
+#network.disconnected { color: #fc4649; border-color: #fc4649; }
+
+/* --- INTERACCIONES --- */
+#workspaces button {
+  all: initial; background: transparent;
+  font-weight: bold; color: #d8cab8; padding: 0 8px;
+}
+#workspaces button.active { color: #ac82e9; }
+#custom-applauncher { padding: 0px 25px; }
+#custom-applauncher:hover, #clock:hover, #pulseaudio:hover {
+  background-color: rgba(20, 18, 22, 0.7);
+}
+
+/* --- TOOLTIPS Y MENÚS --- */
+tooltip, menu { background: #141216; border: 1px solid #ac82e9; border-radius: 8px; padding: 10px; }
+tooltip label, menuitem { color: #d8cab8; padding: 8px; }
+menuitem:hover { background: #ac82e9; color: #141216; }
