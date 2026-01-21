@@ -1,0 +1,73 @@
+#
+# ~/.bashrc
+#
+
+eval "$(starship init bash)"
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+
+alias grep='grep --color=auto'
+
+PS1='[\u@\h \W]\$ '
+
+alias open='xdg-open'
+
+alias copy='wl-copy < '
+
+PATH=$PATH:~/Android/Sdk/platform-tools/
+
+HISTSIZE=
+
+HISTFILESIZE=
+
+HISTCONTROL=ignoredups:erasedups
+
+shopt -s histappend
+
+SE=$HOME/Documents/Cuarto/SE/SE/
+
+PS=$HOME/Documents/Cuarto/PS/Q1_3/
+
+III=$HOME/Documents/Cuarto/III/praticaBloque2/
+
+kys() {
+	kitten icat /home/choped/Pictures/kys/kys.jpg
+	mpv --no-video --really-quiet /home/choped/Pictures/kys/kys.mp3 &
+	sleep 3
+	poweroff
+}
+
+random_pokimon() {
+    REGULAR_DIR="$HOME/Pictures/pokimon/pokesprite/icons/pokemon/regular"
+    SHINY_DIR="$HOME/Pictures/pokimon/pokesprite/icons/pokemon/shiny"
+    
+    SHINY_PROBABILITY=20
+    IMAGE_HEIGHT_CELLS=20
+    HALF=6
+    
+    IMAGE_PATH=""
+    RANDOM_NUM=$(($RANDOM % $SHINY_PROBABILITY + 1))
+    
+    if [ $RANDOM_NUM -eq 1 ] && [ -d "$SHINY_DIR" ]; then
+        IMAGE_PATH=$(find "$SHINY_DIR" -maxdepth 1 -type f -name "*.png" | shuf -n 1)
+        if [ -n "$IMAGE_PATH" ]; then
+            echo "¡Ha aparecido un Pokémon **Shiny**!"
+        fi
+    elif [ -d "$REGULAR_DIR" ]; then
+        IMAGE_PATH=$(find "$REGULAR_DIR" -maxdepth 1 -type f -name "*.png" | shuf -n 1)
+    fi
+    
+    if [ -n "$IMAGE_PATH" ] && command -v kitten &> /dev/null; then
+        kitten icat --place ${IMAGE_HEIGHT_CELLS}x${IMAGE_HEIGHT_CELLS}@0x0 --scale-up --align left --clear "$IMAGE_PATH"
+        echo -en "\033[${HALF}B"
+    elif [ ! -n "$IMAGE_PATH" ]; then
+        echo "Error: No se encontró ninguna imagen en los directorios especificados."
+    elif ! command -v kitten &> /dev/null; then
+        echo "Advertencia: El comando 'kitten icat' no está disponible. ¿Estás usando Kitty?"
+    fi
+}
+
+random_pokimon
