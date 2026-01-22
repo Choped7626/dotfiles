@@ -52,15 +52,16 @@ random_pokimon() {
     RANDOM_NUM=$(($RANDOM % $SHINY_PROBABILITY + 1))
     
     if [ $RANDOM_NUM -eq 1 ] && [ -d "$SHINY_DIR" ]; then
-        IMAGE_PATH=$(find "$SHINY_DIR" -maxdepth 1 -type f -name "*.png" | shuf -n 1)
+        IMAGE_PATH=$(find -L "$SHINY_DIR" -maxdepth 1 -type f -name "*.png" | shuf -n 1)
         if [ -n "$IMAGE_PATH" ]; then
             echo "¡Ha aparecido un Pokémon **Shiny**!"
         fi
     elif [ -d "$REGULAR_DIR" ]; then
-        IMAGE_PATH=$(find "$REGULAR_DIR" -maxdepth 1 -type f -name "*.png" | shuf -n 1)
+        IMAGE_PATH=$(find -L "$REGULAR_DIR" -maxdepth 1 -type f -name "*.png" | shuf -n 1)
     fi
     
     if [ -n "$IMAGE_PATH" ] && command -v kitten &> /dev/null; then
+	clear
         kitten icat --place ${IMAGE_HEIGHT_CELLS}x${IMAGE_HEIGHT_CELLS}@0x0 --scale-up --align left --clear "$IMAGE_PATH"
         echo -en "\033[${HALF}B"
     elif [ ! -n "$IMAGE_PATH" ]; then
