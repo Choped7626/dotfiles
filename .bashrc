@@ -41,8 +41,8 @@ kys() {
 }
 
 random_pokimon() {
-    REGULAR_DIR="$HOME/Pictures/pokimon/pokesprite/icons/pokemon/regular"
-    SHINY_DIR="$HOME/Pictures/pokimon/pokesprite/icons/pokemon/shiny"
+    REGULAR_DIR="$HOME/Pictures/pokimon/regular"
+    SHINY_DIR="$HOME/Pictures/pokimon/shiny"
     
     SHINY_PROBABILITY=20
     IMAGE_HEIGHT_CELLS=20
