@@ -1,0 +1,18 @@
+[Unit]
+Description=Microsoft Teams Starter
+# Esto asegura que espere a que el escritorio esté listo
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+# Añadimos un pequeño retraso de 5 segundos para que cargue el entorno gráfico
+ExecStartPre=/bin/sleep 5
+ExecStart=/usr/bin/teams-for-linux --minimized
+Restart=no
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=%h/.Xauthority
+
+[Install]
+# Cambiamos esto para que se enganche al inicio de tu sesión gráfica
+WantedBy=default.target
