@@ -27,11 +27,7 @@ HISTCONTROL=ignoredups:erasedups
 
 shopt -s histappend
 
-SE=$HOME/Documents/Cuarto/SE/SE/
-
-PS=$HOME/Documents/Cuarto/PS/Q1_3/
-
-III=$HOME/Documents/Cuarto/III/praticaBloque2/
+export TERM=xterm-256color
 
 kys() {
 	kitten icat /home/choped/Pictures/kys/kys.jpg
