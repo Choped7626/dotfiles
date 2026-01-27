@@ -18,10 +18,10 @@ alias copy='wl-copy < '
 alias open='xdg-open'
 PS1='[\u@\h \W]\$ '
 
-alias AII=$HOME/Documents/Cuarto/segundo_cuatri/AII/
-alias RO=$HOME/Documents/Cuarto/segundo_cuatri/RO/
-alias PI=$HOME/Documents/Cuarto/segundo_cuatri/PI/
-alias TFG=$HOME/Documents/Cuarto/TFG/
+export AII="$HOME/Documents/Cuarto/segundo_cuatri/AII/"
+export RO="$HOME/Documents/Cuarto/segundo_cuatri/RO/"
+export PI="$HOME/Documents/Cuarto/segundo_cuatri/PI/"
+export TFG="$HOME/Documents/Cuarto/TFG/"
 
 kys() {
 	kitten icat /home/choped/Pictures/kys/kys.jpg
