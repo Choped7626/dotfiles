@@ -2,32 +2,26 @@
 # ~/.bashrc
 #
 
+[[ $- != *i* ]] && return # If not running interactively, don't do anything
 eval "$(starship init bash)"
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-alias ls='ls --color=auto'
-
-alias grep='grep --color=auto'
-
-PS1='[\u@\h \W]\$ '
-
-alias open='xdg-open'
-
-alias copy='wl-copy < '
+export TERM=xterm-256color
 
 PATH=$PATH:~/Android/Sdk/platform-tools/
-
+HISTCONTROL=ignoredups:erasedups
+shopt -s histappend
+HISTFILESIZE=
 HISTSIZE=
 
-HISTFILESIZE=
+alias grep='grep --color=auto'
+alias ls='ls --color=auto'
+alias copy='wl-copy < '
+alias open='xdg-open'
+PS1='[\u@\h \W]\$ '
 
-HISTCONTROL=ignoredups:erasedups
-
-shopt -s histappend
-
-export TERM=xterm-256color
+alias AII=$HOME/Documents/Cuarto/segundo_cuatri/AII/
+alias RO=$HOME/Documents/Cuarto/segundo_cuatri/RO/
+alias PI=$HOME/Documents/Cuarto/segundo_cuatri/PI/
+alias TFG=$HOME/Documents/Cuarto/TFG/
 
 kys() {
 	kitten icat /home/choped/Pictures/kys/kys.jpg
