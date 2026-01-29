@@ -14,7 +14,8 @@ window#waybar {
 
 /* --- ESTILO BASE DE MÓDULOS --- */
 #temperature, #battery, #network, #clock,
-#custom-applauncher, #tray, #workspaces, #pulseaudio {
+#custom-applauncher, #tray, #workspaces, #pulseaudio, 
+#custom-weather {
   background-color: rgba(20, 18, 22, 0.2);
   margin: 6px 0px 6px 6px;
   padding: 2px 8px;
@@ -64,6 +65,16 @@ window#waybar {
 #network { color: #ac82e9; border-color: #ac82e9; } /* Lila por defecto */
 #network.wifi, #network.ethernet { color: #99ffdd; border-color: #99ffdd; } /* Verde con tráfico */
 #network.disconnected { color: #fc4649; border-color: #fc4649; }
+
+/* --- CLIMA --- */
+#custom-weather { color: #99ffdd; border-color: #99ffdd}
+
+/*
+#custom-weather.sunny { color: #99ffdd; border-color: #99ffdd}
+#custom-weather { color: #99ffdd; border-color: #99ffdd}
+#custom-weather { color: #99ffdd; border-color: #99ffdd}
+#custom-weather { color: #99ffdd; border-color: #99ffdd}
+*/
 
 /* --- INTERACCIONES --- */
 #workspaces button {

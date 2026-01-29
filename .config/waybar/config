@@ -1,7 +1,7 @@
 {
 	"layer": "top",
 	"position": "top",
-	"height": 30,
+	"height": 36,
 	"spacing": 0,
 	"margin-top": 8,
 	"margin-bottom": 0,
@@ -12,6 +12,7 @@
 	"modules-center": ["custom/applauncher"],
 	"modules-right": [
 		"tray",
+		"custom/weather",
 		"temperature",
 		"network",
 		"battery",
@@ -34,6 +35,14 @@
 	"tray": {
 		"spacing": 10,
 		"tooltip": true
+	},
+
+	"custom/weather": {
+		"format": "{}º",
+		"tooltip": true,
+		"interval": 3600,
+		"exec": "wttrbar --nerd --lang es --observation-time",
+		"return-type": "json"
 	},
 
 	"clock": {
