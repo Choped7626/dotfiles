@@ -40,8 +40,8 @@
 	"custom/weather": {
 		"format": "{}º",
 		"tooltip": true,
-		"interval": 3600,
-		"exec": "wttrbar --nerd --lang es --observation-time",
+		"interval": 10,
+		"exec": "wttrbar --date-format '%d-%m-%Y' --nerd --lang es --observation-time",
 		"return-type": "json"
 	},
 
