@@ -40,8 +40,8 @@
 	"custom/weather": {
 		"format": "{}º",
 		"tooltip": true,
-		"interval": 10,
-		"exec": "wttrbar --date-format '%d-%m-%Y' --location A_Coruña --nerd --lang es --observation-time",
+		"interval": 1,
+		"exec": "wttrbar --date-format '%d-%m-%Y' --location Carballo --nerd --lang es --observation-time",
 		"return-type": "json"
 	},
 
