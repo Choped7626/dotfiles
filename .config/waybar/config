@@ -41,7 +41,7 @@
 		"format": "{}º",
 		"tooltip": true,
 		"interval": 10,
-		"exec": "wttrbar --date-format '%d-%m-%Y' --nerd --lang es --observation-time",
+		"exec": "wttrbar --date-format '%d-%m-%Y' --location A_Coruña --nerd --lang es --observation-time",
 		"return-type": "json"
 	},
 
