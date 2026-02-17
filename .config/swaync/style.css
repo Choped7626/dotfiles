@@ -1,0 +1,50 @@
+ .notification-row {
+	 font-family: "Maple Mono Italic";
+	 background: transparent;
+	 margin: 4px;
+}
+
+.close-button {
+	background: transparent;
+	color: transparent;
+	border: none;
+	box-shadow: none;
+}
+
+.notification {
+	background: rgba(26, 27, 38, 0.95);
+	border-radius: 6px;
+	border: 1px solid #AC82E9;
+	padding: 10px;
+	transition: all 0.2s ease;
+}
+
+.notification-action {
+	background: rgba(26, 27, 38, 0.95);
+	font-family: "Maple Mono Italic";
+	transition: all 0.2s ease;
+}
+
+.notification-default-action:hover {
+	background: #AC82E9;
+	color: #1A1B26;
+}
+
+.notification-action:hover {
+	background: #AC82E9;
+	color: #1A1B26;
+}
+
+.notification-actions {
+	background: transparent;
+	margin: 5px;
+} 
+
+.summary {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.body {
+	font-size: 12px;
+}

@@ -1,0 +1,6 @@
+{
+	"style": "~/.config/swaync/style.css",
+	"notification-window-width": 1,
+	"layer": "top",
+	"cssPriority": "application"
+}
