@@ -1,6 +1,37 @@
 {
-	"style": "~/.config/swaync/style.css",
-	"notification-window-width": 1,
-	"layer": "top",
-	"cssPriority": "application"
+  "$schema": "https://github.com/ErikReider/SwayNotificationCenter/releases/latest/download/config.schema.json",
+  "positionX": "right",
+  "positionY": "top",
+  "layer": "top",
+  "control-center-margin-top": 0,
+  "control-center-margin-bottom": 0,
+  "control-center-margin-left": 0,
+  "control-center-margin-right": 0,
+  "notification-icon-size": 64,
+  "notification-body-image-height": 100,
+  "notification-body-image-width": 200,
+  "notification-inline-replies": false,
+  "notification-position-x": "right",
+  "notification-position-y": "top",
+  "notification-window-width": 350,
+  "cssPriority": "user",
+  "widgets": [
+    "title",
+    "dnd",
+    "notifications"
+  ],
+  "widget-config": {
+    "title": {
+      "text": "Notificaciones",
+      "clear-all-button": true,
+      "button-text": "Limpiar"
+    },
+    "dnd": {
+      "text": "No molestar"
+    },
+    "label": {
+      "max-lines": 5,
+      "text": "Label"
+    }
+  }
 }

@@ -1,7 +1,7 @@
  .notification-row {
-	 font-family: "Maple Mono Italic";
-	 background: transparent;
-	 margin: 4px;
+	font-family: "Maple Mono Italic";
+	background: transparent;
+	margin: 4px;
 }
 
 .close-button {
@@ -43,8 +43,10 @@
 .summary {
 	font-weight: bold;
 	font-size: 14px;
+	text-align: center;
 }
 
 .body {
 	font-size: 12px;
+	word-wrap: break-word;
 }
