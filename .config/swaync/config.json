@@ -13,7 +13,7 @@
   "notification-inline-replies": false,
   "notification-position-x": "right",
   "notification-position-y": "top",
-  "notification-window-width": 350,
+  "notification-window-width": 210,
   "cssPriority": "user",
   "widgets": [
     "title",
