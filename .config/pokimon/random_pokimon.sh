@@ -13,9 +13,6 @@ random_pokimon() {
     
     if [ $RANDOM_NUM -eq 1 ] && [ -d "$SHINY_DIR" ]; then
         IMAGE_PATH=$(find -L "$SHINY_DIR" -maxdepth 1 -type f -name "*.png" | shuf -n 1)
-        if [ -n "$IMAGE_PATH" ]; then
-            echo "¡Ha aparecido un Pokémon **Shiny**!"
-        fi
     elif [ -d "$REGULAR_DIR" ]; then
         IMAGE_PATH=$(find -L "$REGULAR_DIR" -maxdepth 1 -type f -name "*.png" | shuf -n 1)
     fi

@@ -1,5 +1,5 @@
  .notification-row {
-	font-family: "Maple Mono Italic";
+	font-family: "Maple Mono";
 	background: transparent;
 	margin: 4px;
 }
@@ -21,7 +21,7 @@
 
 .notification-action {
 	background: rgba(26, 27, 38, 0.95);
-	font-family: "Maple Mono Italic";
+	font-family: "Maple Mono";
 	transition: all 0.2s ease;
 }
 
