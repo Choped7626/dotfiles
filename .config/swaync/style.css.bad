@@ -32,6 +32,25 @@
     color: #1A1B26;
 }
 
+.widget-taskbar {
+    background: transparent;
+}
+.widget-taskbar button {
+    background: transparent;
+    border: none;
+    color: @text-color;
+}
+.widget-taskbar button:hover {
+    background: @border-inactive;
+    color: #1A1B26;
+}
+.widget-taskbar button:checked,
+.widget-taskbar button:active {
+    background: transparent;
+    color: @border-active;
+    border-bottom: 2px solid @border-inactive;
+}
+
 .notification-row {
     background: transparent;
     margin: 0px;
@@ -106,6 +125,18 @@
 .close-button {
     background: transparent;
     color: transparent;
+}
+
+.app-icon {
+    background: rgba(172, 130, 233, 0.2);
+    border-radius: 6px;
+    border: 1px solid @border-inactive;
+    color: @border-inactive;
+}
+.notification-default-icon {
+    background: rgba(172, 130, 233, 0.2);
+    border-radius: 6px;
+    color: @border-inactive;
 }
 
 .widget-dnd {
