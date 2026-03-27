@@ -1,7 +1,7 @@
 show=drun
 term=kitty
 show_all=true
-gtk_dark=false
+gtk_dark=true
 location=center
 insensitive=false
 allow_markup=true
@@ -10,6 +10,6 @@ line_wrap=word
 lines=8
 width=500
 height=300
-no_actions=false
+no_actions=true
 prompt= crema...
 hide_scroll=true
