@@ -27,4 +27,9 @@ export RO="$HOME/Documents/Cuarto/segundo_cuatri/RO/"
 export PI="$HOME/Documents/Cuarto/segundo_cuatri/PI/"
 export TFG="$HOME/Documents/Cuarto/TFG/"
 
+export WEBOTS_HOME="/usr/local/webots"
+
+export GEM_HOME="$HOME/.local/share/gem/ruby/3.4.0"
+export PATH="$GEM_HOME/bin:$PATH"
+
 random_pokimon
