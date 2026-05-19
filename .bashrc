@@ -19,6 +19,7 @@ alias open='xdg-open'
 PS1='[\u@\h \W]\$ '
 
 source "$HOME/.config/pokimon/random_pokimon.sh"
+source "$HOME/.config/scripts/lines-commited.sh"
 source "$HOME/.config/wttr/wttr.sh"
 source "$HOME/.config/kys/kys.sh"
 
