@@ -29,8 +29,8 @@ exec-once = waybar & swaync & hypridle & hyprpaper & nm-applet
 
 monitor = DP-2, 1920x1080@60, 0x0, 1
 monitor = DP-1, 1920x1080@60, 0x0, 1
-#monitor = HDMI-A-1, 1920x1080@60, 1920x0, 1 # television 
-monitor = HDMI-A-1, 1920x1080@120, 1920x0, 1
+monitor = HDMI-A-1, 1920x1080@60, 1920x0, 1 # television 
+#monitor = HDMI-A-1, 1920x1080@120, 1920x0, 1
 monitor = eDP-1, 2880x1800@90, 3840x0, 2
 
 workspace = 9, monitor:DP-1, default:true
@@ -139,6 +139,7 @@ device {
 bind = $mainMod, B, exec, $terminal -e bluetui
 bind = $mainMod, C, killactive,
 bind = $mainMod, E, exec, $fileManager
+# bind = $mainMod, H, exec, helpScript (notification with all bindings)
 bind = $mainMod, L, exit,
 bind = $mainMod, M, exec, thunderbird
 bind = $mainMod, N, exec, swaync-client -t
@@ -211,7 +212,7 @@ bindl = , XF86AudioPrev, exec, playerctl previous
 
 
 ##################################################
-### 🖼️ REGLAS DE VENTANA Y CAPA (WINDOW/LAYER) ###
+#### REGLAS DE VENTANA Y CAPA (WINDOW/LAYER) #####
 ##################################################
 
 # --- REGLAS DE CAPA (layerrule) ---
